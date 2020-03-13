@@ -1,0 +1,45 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="car" class="primitiveSecondaryArray.Car" scope="prototype">
+		<property name="carName">
+			<list>
+				<value>Audi</value>
+				<value>BMW</value>
+				<value>Mercedes</value>
+			</list>
+		</property>
+		<property name="engine">
+			<list>
+				<ref bean = "e1" />
+				<ref bean = "e2" />
+				<ref bean = "e2" />
+			</list>
+		</property>
+		<property name="price">
+			<list>
+				<value>2000000</value>
+				<value>14234234</value>
+				<value>2342353534</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="e1" class="primitiveSecondaryArray.Engine" scope="prototype">
+		<property name="modelyear" value="2018"></property>
+		<property name="numberOfParts" value="25"></property>
+	</bean>
+	<bean id="e2" class="primitiveSecondaryArray.Engine" scope="prototype">
+		<property name="modelyear" value="2019"></property>
+		<property name="numberOfParts" value="26"></property>
+	</bean>
+	<bean id="e3" class="primitiveSecondaryArray.Engine" scope="prototype">
+		<property name="modelyear" value="2020"></property>
+		<property name="numberOfParts" value="30"></property>
+	</bean>
+
+
+
+
+
+</beans>

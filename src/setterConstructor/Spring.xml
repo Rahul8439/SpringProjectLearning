@@ -1,0 +1,22 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			<beans>
+			
+				<bean id="car" class="setterConstructor.Car" scope="prototype">
+					<!-- <property name="carName" value="Audi"></property>
+					<property name="engine" ref="e"></property> -->
+					<constructor-arg index="0" value="Audi"></constructor-arg>
+					<constructor-arg index="2" ref="e"></constructor-arg>
+					<constructor-arg index="1" value="200000" type="int"></constructor-arg>
+				</bean>
+				<bean id="e" class="setterConstructor.Engine" scope="prototype">
+					<!-- <property name="modelyear" value="2018"></property> -->
+					<constructor-arg value="2014" type="String"></constructor-arg>
+					<constructor-arg value="25" type="int"></constructor-arg>
+					
+				</bean>
+				
+				
+				
+			
+			</beans>
